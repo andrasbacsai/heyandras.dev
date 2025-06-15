@@ -8,9 +8,7 @@ rssdescription: Working on the next-gen of Coolify and sharing my journey...
 ---
 # Why this blog exists?
 
-I am currently working on the next-gen version of Coolify, v5, where I would like to make something big.
-
-(Post on <a href="https://x.com/heyandras/status/1932816658596573599">X</a>)
+I am currently working on the next-gen version of Coolify, v5, where I would like to make something big (post on <a href="https://x.com/heyandras/status/1932816658596573599">X</a>).
 
 When I started to do Coolify, I "documented" my journey on social media, which was a lot of fun, but I want to have a more permanent place. 
 
