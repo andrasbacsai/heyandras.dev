@@ -121,7 +121,7 @@ footer{flex-shrink:0;text-align:center;padding:1em 0;}
 @media (max-width:1200px){main{padding-left:15%;padding-right:15%;}}
 @media (max-width:900px){main{padding-left:5%;padding-right:5%;}}
 @media (max-width:600px){main{padding-left:10px;padding-right:10px;}}
-</style></head><body><main><article>${mdToHtml(post.content)}<p><a href='../index.html'>&larr; Back to index</a></p></article></main>${footerHtml}</body></html>`;
+</style></head><body><main><article>${mdToHtml(post.content)}<p><a href='../'>&larr; Back to index</a></p></article></main>${footerHtml}</body></html>`;
     const outPath = join(distPostsDir, post.file.replace('.md', '.html'));
     await writeFile(outPath, html, 'utf8');
   }
@@ -291,7 +291,7 @@ function serve() {
     port: 3000,
     async fetch(req) {
       const url = new URL(req.url);
-      let filePath = join(process.cwd(), 'dist', url.pathname === '/' ? '/index.html' : url.pathname);
+      let filePath = join(process.cwd(), 'dist', url.pathname === '/' ? '/' : url.pathname);
       try {
         const fileStat = await stat(filePath);
         if (fileStat.isFile()) {
