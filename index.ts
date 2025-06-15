@@ -139,7 +139,7 @@ footer{flex-shrink:0;text-align:center;padding:1em 0;}
     const postUrl = `posts/${post.file.replace('.md', '.html')}`;
     // Use first paragraph or first 200 chars as description
     let desc = post.content.split(/\n\n|\r\n\r\n/)[0].replace(/^# .+/, '').trim();
-    if (!desc) desc = post.content.slice(0, 200);
+    if (!desc) desc = post.content.slice(0, 100);
     return `<item>
       <title><![CDATA[${post.title}]]></title>
       <link>{{BASE_URL}}/${postUrl}</link>
