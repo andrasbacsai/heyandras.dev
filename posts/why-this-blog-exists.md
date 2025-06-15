@@ -12,7 +12,7 @@ I am currently working on the next-gen version of Coolify, v5, where I would lik
 
 When I started to work on Coolify, I "documented" my journey on social media. It was a lot of fun, but I want to have a more permanent place. 
 
-> Tt is never late to start a blog. :)
+> It is never late to start a blog. :)
 
 Here I will share the whole process of figuring out how to build it. I will do things that I never did before, or have no idea how to do. You will see all my struggles, mistakes, and learnings and hopefully wins.
 
