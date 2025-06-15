@@ -7,7 +7,7 @@ const BASE_URL = 'https://heyandras.dev'
 const OG_TYPE = 'website';
 const OG_IMAGE = 'https://coolcdn.b-cdn.net/assets/links.jpg';
 const OG_TITLE = 'Andras Bacsai\'s Blog';
-const OG_DESCRIPTION = 'Blog by Andras Bacsai';
+const OG_DESCRIPTION = 'Working on the next-gen of Coolify and sharing my journey...';
 const OG_SITE_NAME = 'Andras Bacsai';
 const TWITTER_SITE = '@heyandras';
 
@@ -68,7 +68,7 @@ async function generate() {
     }
     return {
       file,
-      title: body.match(/^# (.*)$/m)?.[1] || basename(file, '.md'),
+      title: meta.title || body.match(/^# (.*)$/m)?.[1] || basename(file, '.md'),
       content: body,
       meta,
       topics,

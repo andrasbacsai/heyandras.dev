@@ -1,7 +1,8 @@
 ---
+title: Why this blog exists?
 time: 2025-06-15T16:13:00Z
 topic: coolify
-ogimage: https://picsum.photos/800/400
+ogimage: https://coolcdn.b-cdn.net/assets/blog/why.jpg
 
 ---
 # Why this blog exists?
