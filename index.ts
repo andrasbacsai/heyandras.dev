@@ -195,12 +195,12 @@ footer{flex-shrink:0;text-align:center;padding:1em 0;}
       </a>
     </h1>
     <p>I am the founder of <a href="https://coolify.io" target="_blank">Coolify</a>, a popular open-source & self-hostable Heroku / Netlify / Vercel alternative.</p>
-    <p>And this is my blog about my journey...</p>
+    <p>And this is my blog...</p>
 
     <hr>
     ${showTopicsSection ? `<section><b>Topics:</b> ${renderTopics(allTopics)} <a href="#" id="show-all" style="display:none; margin-left:1em;">Show all</a></section>` : ''}
     <h3><a href='posts/${latest.file.replace('.md', '.html')}'>${latest.title}</a>${latest.topics.length > 1 ? ' <small>(' + renderTopics(latest.topics) + ')</small>' : ''} <time style="font-size: 0.6em; font-weight: normal;" datetime='${latest.meta.time || latest.mtime.toISOString()}'></time></h3>
-    ${showPreviousPosts ? `<h3>Previous</h3>
+    ${showPreviousPosts ? `
     <ul id="posts-list" style="list-style-type: none; padding-left: 0;">
       ${others.map(post => `<li data-topics="${post.topics.join(',')}" style="margin-bottom: 0.3em;"><a href='posts/${post.file.replace('.md', '.html')}'>${post.title}</a>${post.topics.length > 1 ? ' <small>(' + renderTopics(post.topics) + ')</small>' : ''} <time datetime='${post.meta.time || post.mtime.toISOString()}'></time></li>`).join('\n')}
     </ul>` : ''}

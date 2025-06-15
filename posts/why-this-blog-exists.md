@@ -27,4 +27,6 @@ Simple. I like minimalism and simplicity. This works everywhere and I can focus 
 
 The code (generated with AI in 30 mins) is available on <a href="https://github.com/andrasbacsai/heyandras.dev">GitHub</a>.
 
+The images are generated with AI.
+
 The content is hand written. :)
