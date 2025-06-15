@@ -2,7 +2,7 @@
 title: Why this blog exists?
 time: 2025-06-15T16:13:00Z
 topic: coolify
-ogimage: https://coolcdn.b-cdn.net/assets/blog/why.jpg
+ogimage: https://coolcdn.b-cdn.net/assets/blog/why.jpeg
 
 ---
 # Why this blog exists?
