@@ -1,0 +1,17 @@
+{
+  "name": "blog",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "scripts": {
+    "serve": "bun run index.ts --serve",
+    "build": "bun run index.ts",
+    "dev": "bun run --watch index.ts"
+  }
+}
