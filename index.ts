@@ -149,12 +149,13 @@ footer{flex-shrink:0;text-align:center;padding:1em 0;}
     </item>`;
   }).join('\n');
   const rssXml = `<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
   <title>Andras Bacsai's Blog</title>
   <link>{{BASE_URL}}/</link>
   <description>Blog by Andras Bacsai</description>
   <language>en</language>
+  <atom:link href="{{BASE_URL}}/rss.xml" rel="self" type="application/rss+xml" />
   ${rssItems}
 </channel>
 </rss>`;
