@@ -33,7 +33,7 @@ function mdToHtml(md: string): string {
     .replace(/\*(.*?)\*/gim, '<i>$1</i>')
     .replace(/`([^`]+)`/gim, '<code>$1</code>')
     .replace(/\[(.*?)\]\((.*?)\)/gim, '<a href="$2">$1</a>')
-    .replace(/^> (.*$)/gim, '<blockquote>$1</blockquote>')
+    .replace(/^> (.*$)/gim, '<blockquote><i>$1</i></blockquote>')
     .replace(/^[-*] (.*$)/gim, '<li>$1</li>')
     .replace(/\n{2,}/g, '</p><p>')
     .replace(/^(?!<h\d|<li|<blockquote|<p|<ul|<ol|<code|<pre|<b|<i|<a|<img|<hr|<br)(.+)$/gim, '<p>$1</p>');
@@ -116,6 +116,7 @@ main{flex:1 0 auto; padding-left: 25%; padding-right: 25%;}
 h1{font-size:2.2em;margin-top:1.2em;margin-bottom:0.6em;}
 h2{font-size:1.5em;margin-top:1em;margin-bottom:0.5em;}
 h3{font-size:1.2em;margin-top:0.8em;margin-bottom:0.4em;}
+blockquote{background:#f5f5f5;padding:0.8em 1.2em;border-radius:6px;margin:1em 0;font-style:italic;color:#444;}
 footer{flex-shrink:0;text-align:center;padding:1em 0;}
 @media (max-width:1200px){main{padding-left:15%;padding-right:15%;}}
 @media (max-width:900px){main{padding-left:5%;padding-right:5%;}}
@@ -137,9 +138,12 @@ footer{flex-shrink:0;text-align:center;padding:1em 0;}
   // Generate RSS feed
   const rssItems = posts.map(post => {
     const postUrl = `posts/${post.file.replace('.md', '.html')}`;
-    // Use first paragraph or first 200 chars as description
-    let desc = post.content.split(/\n\n|\r\n\r\n/)[0].replace(/^# .+/, '').trim();
-    if (!desc) desc = post.content.slice(0, 100);
+    // Use meta.description or meta.rssdescription if available, else fallback
+    let desc = post.meta.description || post.meta.rssdescription;
+    if (!desc) {
+      desc = post.content.split(/\n\n|\r\n\r\n/)[0].replace(/^# .+/, '').trim();
+      if (!desc) desc = post.content.slice(0, 100);
+    }
     return `<item>
       <title><![CDATA[${post.title}]]></title>
       <link>{{BASE_URL}}/${postUrl}</link>
@@ -179,6 +183,7 @@ main{flex:1 0 auto; padding-left: 25%; padding-right: 25%;}
 h1{font-size:2.2em;margin-top:1.2em;margin-bottom:0.6em;}
 h2{font-size:1.5em;margin-top:1em;margin-bottom:0.5em;}
 h3{font-size:1.2em;margin-top:0.8em;margin-bottom:0.4em;}
+blockquote{background:#f5f5f5;padding:0.8em 1.2em;border-radius:6px;margin:1em 0;font-style:italic;color:#444;}
 footer{flex-shrink:0;text-align:center;padding:1em 0;}
 @media (max-width:1200px){main{padding-left:15%;padding-right:15%;}}
 @media (max-width:900px){main{padding-left:5%;padding-right:5%;}}
