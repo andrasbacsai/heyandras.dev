@@ -1,5 +1,5 @@
 {
-  "name": "blog",
+  "name": "andras-blog",
   "module": "index.ts",
   "type": "module",
   "private": true,
