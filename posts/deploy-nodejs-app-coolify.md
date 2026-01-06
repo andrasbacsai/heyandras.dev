@@ -2,7 +2,6 @@
 title: Deploy Your Node.js App in Minutes
 time: 2026-01-06T13:00:00Z
 topic: coolify
-ogimage: [IMAGE_URL]
 rssdescription: Your first Node.js app, self-hosted, in under 10 minutes. Here is how...
 
 ---

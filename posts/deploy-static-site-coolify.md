@@ -2,7 +2,6 @@
 title: Self-Hosting is Easier Than You Think
 time: 2026-01-06T12:00:00Z
 topic: coolify
-ogimage: [IMAGE_URL]
 rssdescription: Your first static site, self-hosted, in under 10 minutes. Here is how...
 
 ---
