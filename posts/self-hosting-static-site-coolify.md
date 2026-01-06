@@ -1,12 +1,12 @@
 ---
-title: Self-Hosting a Static Site with Coolify
+title: How to Self-Host a Static Site
 time: 2026-01-06T12:00:00Z
 topic: coolify, self-hosting
-ogimage: [PLACEHOLDER]
+ogimage:
 rssdescription: Learn how to deploy any static site to your own server using Coolify - no vendor lock-in, full control.
 
 ---
-# Self-Hosting a Static Site with Coolify
+# How to Self-Host a Static Site
 
 Self-hosting sounds intimidating. Servers, Docker, nginx configs - it feels like a lot. But here's the thing: deploying a static site to your own server is simpler than you think, and the benefits are worth it.
 
@@ -26,7 +26,7 @@ It's free to self-host. You just need a VPS.
 
 ## What You Need
 
-- A VPS with Coolify installed (<a href="https://coolify.io/docs">docs</a>)
+- A VPS with Coolify installed ([docs](https://coolify.io/docs))
 - Your static site (HTML/CSS/JS, React build, Vue, Next.js export - anything)
 - A Git repository (GitHub, GitLab, or Bitbucket)
 
