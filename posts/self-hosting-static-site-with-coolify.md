@@ -1,6 +1,6 @@
 ---
 title: Self-Hosting a Static Site with Coolify
-time: 2026-01-06T12:00:00Z
+time: 2025-01-06T12:00:00Z
 topic: coolify,self-hosting
 rssdescription: A beginner's guide to deploying your own static site using Coolify on a VPS.
 ---
@@ -19,7 +19,7 @@ In this guide, I'll walk you through deploying a static site using Coolify. I'll
 
 Before we start, you'll need:
 
-- **A VPS** - I recommend <a href="https://hetzner.cloud">Hetzner</a> for their excellent price-to-performance ratio. A CX22 (2 vCPU, 4GB RAM) for around €4/month is more than enough.
+- **A VPS** - I recommend <a href="https://www.hetzner.com/cloud">Hetzner</a> for their excellent price-to-performance ratio. A CX22 (2 vCPU, 4GB RAM) for around €4/month is more than enough.
 - **A domain name** - Optional, but recommended. You can use a free subdomain from services like <a href="https://freedns.afraid.org">FreeDNS</a> if you don't have one.
 - **A GitHub account** - With a repository containing your static site.
 - **Basic terminal knowledge** - You should be comfortable with SSH and running commands.
@@ -57,6 +57,8 @@ This script will:
 - Configure everything automatically
 
 The installation takes a few minutes. Once it's done, you'll see a message with the URL to access your Coolify dashboard.
+
+> The installation script will display the exact URL at the end. By default, Coolify runs on port 8000.
 
 Open your browser and go to:
 
