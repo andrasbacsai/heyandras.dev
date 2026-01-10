@@ -1,5 +1,5 @@
 ---
-title: Self-Hosting on Hetzner STRAWBERRY
+title: Self-Hosting on Hetzner
 time: 2026-01-10T12:00:00Z
 topic: self-hosting
 rssdescription: Why Hetzner is my go-to choice for self-hosting projects and how to get started...
@@ -15,7 +15,7 @@ If you're getting into self-hosting, you've probably heard of Hetzner. It's a Ge
 
 Hetzner offers some of the best pricing in the industry. Their dedicated servers and cloud instances are significantly cheaper than major cloud providers like AWS, GCP, or Azure. You can get a dedicated server with serious specs for the price of a modest cloud VM elsewhere.
 
-For example, their CAX line (ARM-based cloud servers) starts at just a few euros per month and offers great performance for most workloads.
+For example, their CAX line (ARM-based cloud servers) starts at around €4/month for a CAX11 (2 vCPU, 4GB RAM) and offers great performance for most workloads. Check <a href="https://www.hetzner.com/cloud">Hetzner's pricing page</a> for current rates.
 
 ### European Data Centers
 
@@ -45,6 +45,34 @@ Here's what I typically use for a self-hosting setup:
 - **Ubuntu 24.04** - Stable and well-supported
 - **A tool like Coolify** - Makes deploying applications a breeze
 
+### Initial Server Setup
+
+Once your server is running, here are the essential first steps:
+
+```bash
+# Update the system
+apt update && apt upgrade -y
+
+# Create a non-root user
+adduser deploy
+usermod -aG sudo deploy
+
+# Set up SSH key authentication (run on your local machine)
+ssh-copy-id deploy@your-server-ip
+
+# Disable password authentication (edit on the server)
+sudo nano /etc/ssh/sshd_config
+# Set: PasswordAuthentication no
+sudo systemctl restart sshd
+
+# Install and enable the firewall
+sudo apt install ufw -y
+sudo ufw allow OpenSSH
+sudo ufw enable
+```
+
+After securing the basics, you can install Coolify with a single command and start deploying applications.
+
 ### Things to Consider
 
 1. **Backups** - Hetzner offers automated backups for a small fee. Enable them.
@@ -68,7 +96,15 @@ Hetzner gives you the infrastructure to make this happen without breaking the ba
 
 ## What's Next?
 
-If you're new to self-hosting, start small. Spin up a cheap Hetzner Cloud instance, install something like Coolify, and deploy your first application. You'll learn a lot in the process.
+If you're new to self-hosting, here are some great first projects to try:
+
+1. **Deploy a personal website** - Use Coolify to deploy a static site or blog
+2. **Set up Uptime Kuma** - Monitor your services with a beautiful dashboard
+3. **Install Nextcloud** - Your own cloud storage, calendar, and contacts
+4. **Run Plausible or Umami** - Privacy-friendly analytics for your websites
+5. **Self-host Vaultwarden** - Your own password manager
+
+Each of these teaches you something new about Docker, networking, and server management.
 
 > The best time to start self-hosting was yesterday. The second best time is now.
 
