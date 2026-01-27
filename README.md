@@ -1,4 +1,4 @@
-# Minimal Bun Blog Generator
+# Minimal Bun Blog Generator (lol)
 
 This is a super minimal static blog generator built with Bun. It:
 
