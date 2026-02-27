@@ -1,4 +1,4 @@
-# Minimal Bun Blog Generator
+# Minimal Bun Blog Generator (lol)
 
 This is a super minimal static blog generator built with Bun. It:
 
@@ -23,3 +23,5 @@ bun run index.ts
 ```
 
 This project was created using `bun init` in bun v1.2.4. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+
+Nothing to see here.
